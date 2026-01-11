@@ -1,19 +1,19 @@
 export const portfolioData = {
     name: "Shishir Subedi",
-    role: "Software Engineer & Data Scientist",
+    role: "IT Assistant",
     hero: {
         title: "Shishir Subedi",
-        subtitle: "Building Logic with LLMs & Data",
-        description: "Software Engineer & Data Scientist specializing in Artificial Intelligence, Vector Databases, and scalable backend systems. Transforming complex data into intelligent solutions.",
+        subtitle: "Learning System and Network Administration ",
+        description: "Learner in System and Network Administration, building skills in Linux/Windows system administration, networking fundamentals (TCP/IP, DNS, DHCP), troubleshooting, and basic cybersecurity. I’m actively practicing hands-on labs and aiming for junior opportunities in IT support, network operations, and system administration.",
         available: "Available for New Opportunities",
         ctaPrimary: "Start a Conversation",
         ctaSecondary: "View Work"
     },
     about: {
         heading: "About Me",
-        subheading: "Bridging the gap between Data Science and Software Engineering.",
-        bioPrimary: "I am a Software Engineer with over 5 years of experience, currently diving deep into the world of Data Science and Analytics. My journey began with a curiosity for how data shapes our modern world, leading me to specialize in LLMs and Vector Databases.",
-        bioSecondary: "Currently pursuing an MSc in Data Science at IOE Pulchowk Campus, I combine academic rigor with practical industry experience. Whether it's architecting scalable APIs or fine-tuning models for specific domains, I love solving complex problems.",
+        subheading: "Bridging gap between IT Infrastructure and System Administration.",
+        bioPrimary: "I am a learner in System and Network Administration, building strong foundations in Linux and Windows system administration, networking (TCP/IP, DNS, DHCP, subnetting), and troubleshooting. I’m developing hands-on skills in configuring servers, managing users and permissions, and maintaining secure and reliable networks. I’m eager to apply these skills in internships or entry-level roles in IT support, system administration, or network operations.",
+        bioSecondary: "Currently on the verge of pursuing an MSc in Information Technology Management, I aim to combine strong academic foundations with practical, real-world experience. Whether it's supporting IT infrastructure, improving system reliability, or aligning technology with business goals, I enjoy solving complex problems and delivering efficient solutions.",
         skills: [
             "Python (Django/FastAPI)", "React.js", "Large Language Models (LLMs)",
             "Prompt Engineering", "Vector Databases", "AWS", "REST APIs",
