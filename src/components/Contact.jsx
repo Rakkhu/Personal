@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion';
 import { Mail, MapPin, Phone } from 'lucide-react';
+import { portfolioData } from '../portfolio';
 
 const Contact = () => {
+    const { contact } = portfolioData;
+
     return (
         <section id="contact" className="py-20 bg-dark-800 relative overflow-hidden">
             {/* Background decoration */}
@@ -14,9 +17,9 @@ const Contact = () => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl font-bold text-white mb-4">Get In Touch</h2>
+                    <h2 className="text-3xl font-bold text-white mb-4">{contact.heading}</h2>
                     <p className="text-gray-400 max-w-2xl mx-auto">
-                        Interested in working together? Whether you have a project in mind or just want to discuss the latest in AI, feel free to reach out.
+                        {contact.description}
                     </p>
                 </motion.div>
 
@@ -34,7 +37,7 @@ const Contact = () => {
                             </div>
                             <div>
                                 <h3 className="text-white font-medium text-lg">Email</h3>
-                                <p className="text-gray-400">contact@shishirsubedi.com</p>
+                                <p className="text-gray-400">{contact.email}</p>
                             </div>
                         </div>
 
@@ -44,7 +47,7 @@ const Contact = () => {
                             </div>
                             <div>
                                 <h3 className="text-white font-medium text-lg">Phone</h3>
-                                <p className="text-gray-400">+977-98XXXXXXXX</p>
+                                <p className="text-gray-400">{contact.phone}</p>
                             </div>
                         </div>
 
@@ -54,7 +57,7 @@ const Contact = () => {
                             </div>
                             <div>
                                 <h3 className="text-white font-medium text-lg">Location</h3>
-                                <p className="text-gray-400">Kathmandu, Nepal</p>
+                                <p className="text-gray-400">{contact.location}</p>
                             </div>
                         </div>
                     </motion.div>

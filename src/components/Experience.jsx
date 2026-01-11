@@ -1,27 +1,9 @@
 import { motion } from 'framer-motion';
-import { Briefcase, Calendar } from 'lucide-react';
+import { Calendar } from 'lucide-react';
+import { portfolioData } from '../portfolio';
 
 const Experience = () => {
-    const experiences = [
-        {
-            title: "Software Engineer",
-            company: "Various Tech Companies",
-            period: "2019 - Present",
-            description: "Led development of scalable web applications. Managed full operational cycle from requirement gathering to production deployment. Specialized in Python/Django backends and React frontends."
-        },
-        {
-            title: "Freelance Developer",
-            company: "Self-Employed",
-            period: "2018 - Present",
-            description: "Developed custom web solutions using Python and Django. Built RESTful APIs using Django REST Framework. Implemented web scraping and data parsing solutions for international clients."
-        },
-        {
-            title: "Part-time Lecturer",
-            company: "IOE Pulchowk Campus (and others)",
-            period: "2020 - 2022",
-            description: "Delivered lectures on Artificial Intelligence and Data Mining. Mentored students in their final year projects and guided them through practical implementations of machine learning algorithms."
-        }
-    ];
+    const { experience } = portfolioData;
 
     return (
         <section id="experience" className="py-20 bg-dark-800">
@@ -41,7 +23,7 @@ const Experience = () => {
                     <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-0.5 bg-dark-700"></div>
 
                     <div className="space-y-12">
-                        {experiences.map((exp, index) => (
+                        {experience.map((exp, index) => (
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 20 }}

@@ -1,27 +1,9 @@
 import { motion } from 'framer-motion';
 import { Github, ExternalLink, Code } from 'lucide-react';
+import { portfolioData } from '../portfolio';
 
 const Projects = () => {
-    const projects = [
-        {
-            title: "RAG-based Document Chat",
-            description: "A system enabling users to chat with PDF documents using customized LLMs and Vector Databases. Features accurate context retrieval and natural language responses.",
-            tags: ["LangChain", "OpenAI", "Pinecone", "React"],
-            links: { github: "#", live: "#" }
-        },
-        {
-            title: "Django E-Commerce API",
-            description: "Scalable RESTful API for a multi-vendor e-commerce platform. Handles complex product variations, inventory management, and payment gateway integrations.",
-            tags: ["Django REST", "PostgreSQL", "Redis", "Docker"],
-            links: { github: "#", live: "#" }
-        },
-        {
-            title: "Data Analysis Dashboard",
-            description: "Interactive dashboard for visualizing real-time data streams. Used for monitoring system metrics and business KPIs with dynamic charts.",
-            tags: ["React", "D3.js", "FastAPI", "WebSockets"],
-            links: { github: "#", live: "#" }
-        }
-    ];
+    const { projects } = portfolioData;
 
     return (
         <section id="projects" className="py-20 bg-dark-900">
