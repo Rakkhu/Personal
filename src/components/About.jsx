@@ -1,11 +1,8 @@
 import { motion } from 'framer-motion';
+import { portfolioData } from '../portfolio';
 
 const About = () => {
-    const skills = [
-        "Python (Django/FastAPI)", "React.js", "Large Language Models (LLMs)",
-        "Prompt Engineering", "Vector Databases", "AWS", "REST APIs",
-        "Data Mining", "PostgreSQL", "JavaScript"
-    ];
+    const { about } = portfolioData;
 
     return (
         <section id="about" className="py-20 bg-dark-900 relative">
@@ -19,24 +16,22 @@ const About = () => {
                 >
                     <div>
                         <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-neon-purple to-neon-pink mb-6 inline-block">
-                            About Me
+                            {about.heading}
                         </h2>
                         <h3 className="text-2xl text-white font-semibold mb-4">
-                            Bridging the gap between Data Science and Software Engineering.
+                            {about.subheading}
                         </h3>
                         <p className="text-gray-400 mb-6 leading-relaxed">
-                            I am a Software Engineer with over 5 years of experience, currently diving deep into the world of Data Science and Analytics.
-                            My journey began with a curiosity for how data shapes our modern world, leading me to specialize in LLMs and Vector Databases.
+                            {about.bioPrimary}
                         </p>
                         <p className="text-gray-400 mb-8 leading-relaxed">
-                            Currently pursuing an MSc in Data Science at IOE Pulchowk Campus, I combine academic rigor with practical industry experience.
-                            Whether it's architecting scalable APIs or fine-tuning models for specific domains, I love solving complex problems.
+                            {about.bioSecondary}
                         </p>
 
                         <div>
                             <h4 className="text-white font-medium mb-4">Technical Arsenal</h4>
                             <div className="flex flex-wrap gap-2">
-                                {skills.map((skill, index) => (
+                                {about.skills.map((skill, index) => (
                                     <span key={index} className="px-3 py-1 rounded-full text-xs font-medium bg-dark-800 text-neon-cyan border border-dark-700">
                                         {skill}
                                     </span>
