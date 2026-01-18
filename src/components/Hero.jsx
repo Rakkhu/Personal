@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion';
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
+import { portfolioData } from '../portfolio';
 
 const Hero = () => {
+    const { hero, contact } = portfolioData;
+
     return (
         <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-dark-900 pt-20">
 
@@ -21,13 +24,13 @@ const Hero = () => {
                     className="mb-8"
                 >
                     <span className="inline-block py-1 px-3 rounded-full bg-dark-800 border border-dark-700 text-neon-cyan text-sm font-medium tracking-wide mb-6">
-                        Available for New Opportunities
+                        {hero.available}
                     </span>
                     <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight mb-4">
-                        Shishir <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-purple to-neon-cyan">Subedi</span>
+                        {hero.title.split(' ')[0]} <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-purple to-neon-cyan">{hero.title.split(' ').slice(1).join(' ')}</span>
                     </h1>
                     <h2 className="text-2xl md:text-4xl font-light text-gray-400 mb-8">
-                        Building Logic with <span className="font-semibold text-gray-200">LLMs</span> & <span className="font-semibold text-gray-200">Data</span>
+                        {hero.subtitle}
                     </h2>
                 </motion.div>
 
@@ -37,7 +40,7 @@ const Hero = () => {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="text-gray-400 max-w-2xl mb-10 text-lg leading-relaxed"
                 >
-                    Software Engineer & Data Scientist specializing in <span className="text-neon-cyan">Artificial Intelligence</span>, <span className="text-neon-purple">Vector Databases</span>, and scalable backend systems. Transforming complex data into intelligent solutions.
+                    {hero.description}
                 </motion.p>
 
                 <motion.div
@@ -47,10 +50,10 @@ const Hero = () => {
                     className="flex flex-wrap gap-4 justify-center"
                 >
                     <a href="#contact" className="px-8 py-3 rounded-lg bg-neon-purple hover:bg-neon-purple/90 text-white font-semibold transition-all shadow-[0_0_20px_rgba(139,92,246,0.3)] hover:shadow-[0_0_30px_rgba(139,92,246,0.5)]">
-                        Start a Conversation
+                        {hero.ctaPrimary}
                     </a>
                     <a href="#projects" className="px-8 py-3 rounded-lg bg-dark-800 border border-dark-700 hover:border-neon-cyan text-gray-300 hover:text-white transition-all">
-                        View Work
+                        {hero.ctaSecondary}
                     </a>
                 </motion.div>
 
@@ -60,13 +63,13 @@ const Hero = () => {
                     transition={{ duration: 1, delay: 1 }}
                     className="mt-16 flex gap-6"
                 >
-                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white hover:scale-110 transition-all">
+                    <a href={contact.social.github} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white hover:scale-110 transition-all">
                         <Github size={24} />
                     </a>
-                    <a href="https://linkedin.com/in/subedishishir" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-neon-cyan hover:scale-110 transition-all">
+                    <a href={contact.social.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-neon-cyan hover:scale-110 transition-all">
                         <Linkedin size={24} />
                     </a>
-                    <a href="mailto:contact@shishirsubedi.com" className="text-gray-400 hover:text-neon-pink hover:scale-110 transition-all">
+                    <a href={`mailto:${contact.email}`} className="text-gray-400 hover:text-neon-pink hover:scale-110 transition-all">
                         <Mail size={24} />
                     </a>
                 </motion.div>

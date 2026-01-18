@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Terminal } from 'lucide-react';
+import { portfolioData } from '../portfolio';
 
 const Navbar = () => {
+    const { name } = portfolioData;
+    const initials = name.split(' ').map(n => n[0]).join('') + '.';
     const [scrolled, setScrolled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
 
@@ -28,7 +31,7 @@ const Navbar = () => {
                     <div className="flex-shrink-0 cursor-pointer group">
                         <span className="text-2xl font-bold bg-gradient-to-r from-neon-cyan to-neon-purple bg-clip-text text-transparent group-hover:opacity-80 transition-opacity flex items-center gap-2">
                             <Terminal size={24} className="text-neon-cyan" />
-                            SS.
+                            {initials}
                         </span>
                     </div>
 
